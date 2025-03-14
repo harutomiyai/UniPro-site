@@ -15,6 +15,7 @@ spec:
       containers:
         - name: app
           image: registry.uniproject.jp/hp-infra/unipro-site:2.1.1
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
               name: default-port
