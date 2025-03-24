@@ -91,11 +91,31 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
 }
 
 .hero-title {
     color: white;
     font-size: 4rem;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+#hero-subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#hero-subtitle.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.hero-overlay p {
+    color: white;
+    font-size: 1.3rem;
     letter-spacing: 0.1em;
     text-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
