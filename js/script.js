@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     control.addEventListener("click", () => {
         if (video.paused) {
             video.play();
-            icon.src = "pause.svg";
+            icon.src = "/svg/pause.svg";
         } else {
             video.pause();
-            icon.src = "play.svg";
+            icon.src = "/svg/play.svg";
         }
     });
 });
