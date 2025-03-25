@@ -16,40 +16,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector(".hero-title");
+    const block = document.querySelector(".reveal-block");
+    const text = document.querySelector(".hero-title .text");
     const subtitle = document.getElementById("hero-subtitle");
+    block.animate([
+        { width: "0%" },
+        { width: "100%" }
+    ], {
+        duration: 150,
+        easing: "ease-in-out",
+        fill: "forwards"
+    }).onfinish = () => {
+        text.style.opacity = 1;
+        block.animate([
+            { left: "0%", width: "100%" },
+            { left: "100%", width: "0%" }
+        ], {
+            duration: 150,
+            easing: "ease-in-out",
+            fill: "forwards"
+        }).onfinish = () => {
+            subtitle.classList.add("show");
+        };
+    };
+});
 
-    const fullText = "境界の、その先で";
-    const firstPart = "境界の、";
-    const secondPart = "その先で";
 
-    title.textContent = "";
+document.addEventListener("DOMContentLoaded", () => {
+    const cursor = document.querySelector(".custom-cursor");
 
-    let i = 0;
+    document.addEventListener("mousemove", (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
 
-    function typeText(text, callback) {
-        if (i < text.length) {
-            title.textContent += text.charAt(i);
-            i++;
-            setTimeout(() => typeText(text, callback), 120);
-        } else if (callback) {
-            setTimeout(callback, 500);
-        }
-    }
-
-    function typeSecondPart() {
-        let j = 0;
-        function typeNextChar() {
-            if (j < secondPart.length) {
-                title.textContent += secondPart.charAt(j);
-                j++;
-                setTimeout(typeNextChar, 120);
-            } else {
-                subtitle.classList.add("show");
-            }
-        }
-        typeNextChar();
-    }
-
-    typeText(firstPart, typeSecondPart);
+        cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        cursor.style.width = '20px';
+        cursor.style.height = '20px';
+        cursor.style.backgroundColor = '#fff';
+    });
 });
