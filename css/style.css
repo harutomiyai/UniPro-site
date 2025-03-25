@@ -188,13 +188,24 @@ body, html {
     filter: invert(96%) sepia(97%) saturate(0%) hue-rotate(33deg) brightness(105%) contrast(103%);
 }
 
+a.button-wrap {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform .3s cubic-bezier(.24,.45,.32,1);
+    will-change: transform;
+    position: relative;
+}
 
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 80vh;
 }
-
 
 .content-section {
     width: 100%;

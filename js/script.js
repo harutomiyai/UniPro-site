@@ -14,6 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+let target = document.querySelector('.button-wrap');
+let elemData;
+target.addEventListener("mouseenter", e => {
+    elemData = target.getBoundingClientRect();
+})
+
+target.addEventListener("mousemove", e => {
+    let transX = ((e.clientX - (elemData.width / 2)) - elemData.left) * 0.6;
+    let transY = ((e.clientY - (elemData.height / 2)) - elemData.top) * 0.6;
+    target.style.transform = "translate(" + transX + "px, " + transY + "px)";
+})
+
+target.addEventListener("mouseleave", e => {
+    target.style.transform = "translate(0px, 0px)";
+})
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const block = document.querySelector(".reveal-block");
@@ -50,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const y = e.clientY;
 
         cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-        cursor.style.width = '20px';
-        cursor.style.height = '20px';
+        cursor.style.width = '30px';
+        cursor.style.height = '30px';
         cursor.style.backgroundColor = '#fff';
     });
 });
