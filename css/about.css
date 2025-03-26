@@ -189,7 +189,7 @@ html, body {
 }
 
 .sidebar--right:not(.active):hover {
-    transform: translateX(calc(75% - 10px));
+    transform: translateX(calc(75% - 20px));
 }
 
 .about__content {
