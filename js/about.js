@@ -6,8 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
         rightSidebar.classList.toggle("active");
     });
 
-    // 初期状態でサイドバーをクリック可能にする
+
     rightSidebar.addEventListener("click", () => {
         rightSidebar.classList.toggle("active");
     });
+
+    document.addEventListener("click", (event) => {
+        if (!rightSidebar.contains(event.target) && !menuButton.contains(event.target)) {
+            rightSidebar.classList.remove("active");
+        }
+    });
 });
+
