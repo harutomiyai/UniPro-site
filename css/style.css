@@ -269,7 +269,6 @@ a.button-wrap {
 .horizontal-flex {
     display: flex;
     align-items: center;
-    gap: 20px;
     flex-direction: column;
 }
 
@@ -277,6 +276,7 @@ a.button-wrap {
     width: 80px;
     height: auto;
     filter: invert(1%) sepia(2%) saturate(21%) hue-rotate(314deg) brightness(109%) contrast(82%);
+    padding-bottom: 20px;
 }
 
 .content-section:hover .logo,
@@ -287,6 +287,7 @@ a.button-wrap {
 .brand_logo {
     width: 80px;
     height: auto;
+    padding-bottom: 20px;
 }
 
 footer {

@@ -7,25 +7,54 @@
     <link rel="stylesheet" href="/css/about.css">
     <link rel="icon" href="svg/UniProject_logo.svg">
 </head>
-<body>
-    <div class="about-header">
-        <div class="about-header__logo-and-nav">
-            <div class="about-header__logo" id="logo">
-                <a href="index.html">
-                    <img src="svg/UniProject_logo.svg" alt="UniProject">
-                </a>
-            </div>
-            <nav class="about-header__nav" id="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="project.html">PROJECT</a></li>
-                    <li class="nav-item"><a href="work.html">WORK</a></li>
-                    <li class="nav-item"><a href="news.html">NEWS</a></li>
-                    <li class="nav-item"><a href="contact.html">CONTACT</a></li>
-                    <li class="nav-item"><a href="#" class="button">参加する</a></li>
-                </ul>
-            </nav>
+    <body>
+        <div class="layout">
+            <aside class="sidebar sidebar--left">
+                <div class="sidebar__label">About</div>
+            </aside>
+            <main class="main" id="mainContent">
+                <section class="about">
+                    <h1 class="about__heading">About</h1>
+                </section>
+            </main>
+            <aside class="sidebar sidebar--right" id="sidebarRight">
+                <nav class="sidebar__nav">
+                    <h2 class="sidebar__title">Menu</h2>
+                    <ul class="sidebar__list" id="sidebarList">
+                        <li class="sidebar__item">
+                            <a href="/index.html" class="sidebar__link">Home</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="/about.html" class="sidebar__link">About</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="/project.html" class="sidebar__link">Project</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="/work.html" class="sidebar__link">Work</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="/news.html" class="sidebar__link">News</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="/contact.html" class="sidebar__link">Contact</a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="/credit.html" class="sidebar__link">Credit</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <header class="header">
+                <div class="header__spacer"></div>
+                <div class="header__logo header__logo--center">
+                    <img src="/svg/UniProject_logo.svg" alt="UniProject Logo" class="header__logo-image">
+                </div>
+                <div class="header__menu">
+                    <img src="/svg/menu.svg" alt="Menu" class="header__menu-icon">
+                </div>
+            </header>
         </div>
-    </div>
-    <script src="/js/about.js"></script>
-</body>
+        <script src="/js/about.js"></script>
+    </body>
 </html>
