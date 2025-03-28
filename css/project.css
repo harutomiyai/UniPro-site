@@ -249,6 +249,20 @@ html, body {
     }
 }
 
+.project__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.project__content-heading {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
 /* === フッター === */
 .project__footer {
     display: flex;
@@ -272,14 +286,19 @@ html, body {
     --lightness: 65%;
 }
 
-ul {
-    --step: calc((var(--end) - var(--start)) / (var(--count) - 1));
+
+.content__list {
+    list-style: none;
 }
 
+.content__item {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
 
 main {
-    padding-top: 50vh;
     height: 400vh;
+    margin-left: 5%;
 }
 
 @supports (animation-timeline: scroll()) and (animation-range: 0% 100%) {
@@ -331,7 +350,7 @@ main {
 section:first-of-type h2 {
     position: sticky;
     top: calc(50% - 0.5lh);
-    font-size: 15px;
+    font-size: 3.5rem;
     margin: 0;
     display: inline-block;
     height: -webkit-fit-content;
