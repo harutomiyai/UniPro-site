@@ -194,8 +194,6 @@ html, body {
 
 .contact__content {
     margin-left: 5%;
-    width: 100%;
-    height: 100%;
 }
 
 .scroll-container {
@@ -305,4 +303,54 @@ html, body {
     display: flex;
     align-items: center;
     width: 200px;
+}
+
+.contact__boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact__box {
+    background-color: #808080;
+    padding: 2rem;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.contact__box:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+.contact__content-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 10%;
+}
+
+
+.twitter-follow-button {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact__content a {
+    color: #000;
+}
+
+.contact__content a:hover {
+    text-decoration: underline;
+}
+
+.contact__content-entry {
+    margin-bottom: 100px;
+}
+
+.contact__content-text_sns {
+    margin-top: 30px;
 }

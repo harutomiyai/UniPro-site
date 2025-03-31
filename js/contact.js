@@ -18,3 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+const contactBoxes = document.querySelectorAll(".contact__box");
+
+contactBoxes.forEach((box, index) => {
+    box.addEventListener("click", () => {
+        const targetIds = ["entry", "sns", "mail"];
+        const targetId = targetIds[index];
+        if (targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    });
+});
