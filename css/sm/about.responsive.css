@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+    .sidebar--left {
+        display: none;
+    }
+
+    .sidebar--right {
+        transform: translateX(100%);
+    }
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}

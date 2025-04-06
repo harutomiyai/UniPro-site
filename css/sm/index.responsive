@@ -1,0 +1,55 @@
+/* filepath: /Users/harutomiyai/Documents/GitHub/UniPro-site/css/sm/index.responsive.css */
+
+/* Responsive styles for smartphones */
+@media screen and (max-width: 768px) {
+    body, html {
+        padding-top: 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    #hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .content-section {
+        height: auto;
+        padding: 20px;
+    }
+
+    .content-inner {
+        font-size: 1rem;
+    }
+
+    .logo, .brand_logo {
+        width: 60px;
+    }
+
+    .video-control {
+        bottom: 10%;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
